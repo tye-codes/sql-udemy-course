@@ -1,0 +1,90 @@
+.auth-form-heading--auth-form-heading--BNXbz {
+  font-size: clamp(1.7rem, calc(1.7rem + (1.8 - 1.7) * calc((100vw - 36rem) / (144 - 36))), 1.8rem);
+  text-align: center;
+}
+@media (min-width: 37.5625rem) {
+  .auth-form-heading--auth-form-heading--BNXbz {
+    font-size: clamp(2rem, calc(2rem + (2.4 - 2) * calc((100vw - 36rem) / (144 - 36))), 2.4rem);
+  }
+}
+@media (min-width: 61.3125rem) {
+  .auth-form-heading--auth-form-heading--BNXbz {
+    font-size: clamp(2.4rem, calc(2.4rem + (3.2 - 2.4) * calc((100vw - 36rem) / (144 - 36))), 3.2rem);
+  }
+}
+
+.helpers--auth-container--PHfbv {
+  inline-size: 40rem;
+  max-inline-size: 100%;
+  padding-block: 4.8rem;
+  padding-inline: 2.4rem;
+}
+.helpers--auth-title---6vwg {
+  margin-block-end: 1.6rem;
+}
+.helpers--auth-form-row--fFzdR + .helpers--auth-form-row--fFzdR {
+  margin-block-start: 0.8rem;
+}
+.helpers--auth-form-row--fFzdR .ud-toggle-input-container {
+  margin-block-end: -0.8rem;
+}
+.helpers--auth-separator--oswiI {
+  border-block-start: 1px solid oklch(86.72% 0.0192 282.72deg);
+  margin-block: 1.6rem;
+  margin-inline: 0;
+}
+.helpers--auth-submit-button--W3Tqk {
+  margin-block-start: 1.6rem;
+  inline-size: 100%;
+}
+.helpers--auth-footer--7fgE3 {
+  margin-block-start: 1.6rem;
+  text-align: center;
+}
+.helpers--auth-footer--7fgE3 > div:not(.helpers--auth-separator--oswiI) + div:not(.helpers--auth-separator--oswiI) {
+  margin-block-start: 0.4rem;
+}
+.helpers--auth-footer--7fgE3 > div:not(.helpers--auth-separator--oswiI) + .helpers--terms-text--uzmu3:not(.helpers--auth-separator--oswiI) {
+  margin-block-start: 1.6rem;
+}
+.helpers--auth-alert-error--lQk-q {
+  margin-block-end: 1.6rem;
+}
+.ud-modal .helpers--auth-container--PHfbv {
+  padding-block: 2.4rem;
+  padding-inline: 2.4rem;
+}
+.ud-modal .helpers--auth-title---6vwg {
+  margin-block-start: 0.3rem;
+  margin-inline-end: 2.4rem;
+}
+
+.add-phone-number-module--button-width-full--YvLwM {
+  inline-size: 100%;
+}
+.add-phone-number-module--text-align-center--tcZQu {
+  text-align: center;
+}
+.add-phone-number-module--change-phone-number-button--kWCn- {
+  margin-inline-start: 0.5rem;
+  justify-content: center;
+}
+
+.auth-form-row--x-small--In2s5 {
+  margin-block-end: 0.8rem;
+}
+.auth-form-row--small--Byo8R {
+  margin-block-end: 1.6rem;
+}
+.auth-form-row--medium--T7wIs {
+  margin-block-end: 2.4rem;
+}
+.auth-form-row--large--tUoO2 {
+  margin-block-end: 3.2rem;
+}
+.auth-form-row--xx-large--8OECD {
+  margin-block-end: 6.4rem;
+}
+
+
+/*# sourceMappingURL=common-desktop-udlite-app.e78defb3f403e75c8d52.css.map*/
