@@ -22,5 +22,10 @@ PARTITION BY: sets the key/group for which the function is operated on. Can be p
 ORDER BY: works the same as outside a window function.
 RANK: sets numeric rank to each row based on conditions set
 FRAMING: set by rows in this example, sets a range on the data to be worked within. The frame is how many data points are acted upon by the window function
+	(ROWS BETWEEN CURRENT ROW AND 2 FOLLOWING)  keywords are UNBOUNDED, PRECEEDING, FOLLOWING, CURRENT ROW.
 
-
+Limitations:
+1. window functions must be used in ORDER BY or SELECT clauses
+2. window functions cannot be nested
+3. window functions operate after WHERE clause
+4. window functions can be used together with the group by clause if you use the same columns

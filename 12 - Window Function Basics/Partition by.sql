@@ -34,3 +34,4 @@ SELECT
 	SUM(Sales) OVER(PARTITION BY ProductID) totalSalesByProduct,
 	SUM(Sales) OVER(PARTITION BY ProductID, OrderStatus) SalesByproductsAndStatus
 FROM Sales.Orders
+
