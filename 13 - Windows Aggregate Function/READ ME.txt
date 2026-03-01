@@ -1,0 +1,8 @@
+Aggregate window functions apply the aggregate function to the window set by PARTITION BY:
+
+AVG(Sales) OVER (PARTITION BY ProductID ORDER BY Sales)
+could be count, sum, avg, min or max.
+
+Notes:
+
+
