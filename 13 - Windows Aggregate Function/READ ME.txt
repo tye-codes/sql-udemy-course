@@ -4,5 +4,21 @@ AVG(Sales) OVER (PARTITION BY ProductID ORDER BY Sales)
 could be count, sum, avg, min or max.
 
 Notes:
+COUNT:
+overall analysis, category analysis, qualit checks of NULLs and quality checks for duplicate rows. 
 
+Summary
+aggregates a set of values and gives a single aggregate values
+Rules: expects an expression, all clauses are optional
+
+use cases:
+overall analysis
+total per groups analusis
+part to whol analysis
+caomparison analysis
+identify duplicates
+outlier detection
+running total
+rollling total
+moving average
 

@@ -1,0 +1,29 @@
+This section covers ranking functions.
+- Window: Row number, Rank, Dense_rank
+- Use case for top/bottom analysis
+- Use case for assigning unique ids
+- use case to identify duplicates
+- window: cume_dist, percent_rank, NTILE
+
+SYNTAX:
+RANK() OVER(PARTITION BY ProductID ORDER BY Sales) ... only PARTITION BY is optional
+
+ROW_NUMBER:
+Assigns a unique number to each row. Has a lot of use cases.
+
+RANK:
+Assigns rank to each row, duplicate values are assigned the same rank. If there is a duplicate on rank 2, the next rank will be 4.
+
+DENSE_RANK:
+Assigns rank to each row, duplicate values are assigned the same rank. Does not leave gaps in rank.
+
+PERCENTAGE BASED RANKING:
+CUME_DIST(): cumulative distribution function. Is calculated by position number / number of rows. For ties, position number will be
+the largest row number
+
+PERCENT_RANK(): Calculates the relative position of each row. percent_rank = Position No. - 1 / No. of Rows - 1. If there is a tie
+the position is the lowest position number across all ties.
+
+NTILE(): splits data into even bucket ranks. If it can't be done evenly, larger groups have priority and come first.
+can be used for data segmentation
+
