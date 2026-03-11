@@ -1,0 +1,41 @@
+Section 15 value functions
+
+Gets the value from a cell based on the function used.
+
+LEAD() LAG() FIRST_VALUE() LAST_VALUE()
+
+LEAD & LAG
+
+LEAD(Sales, 2, 10) OVER(PARTITION BY ProductID ORDER BY OrderDate)
+the 2 is the offset (optional) is how many rows forwardfrom current row, default =1.
+10 is default value, if next row is unavailable, value will be 10. Or null if not set. 
+
+LAG(Sales, 2, 10): is the same as LEAD() except will go backwards not forward 
+
+USE CASE:
+Time Series analysis
+Time Gap Analysis
+
+FIRST_VALUE() LAST_VALUE() Notes:
+LAST_VALUE() default settings do not work well. Bounds need to be specified. 
+
+LAST_VALUE(Sales) OVER(ORDER BY Month ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING)
+
+
+Summary:
+
+Allows access of specific values from another row
+
+RULES:
+Expression - any data type
+order by: required
+Frame: optional
+
+USE CASE:
+Time series analysis
+Time gap analysis
+Comparison analysis
+
+
+She advises tye would heavily use acid, which heavily impact pschysto behaiviour, she moved up to mackay, felt isolated by me. I would record her phone calls to family and accuse her of lying. I was involved with drug trafficing and selling durgs. At times I would spit on her and degrade her. Ther
+were instances of physical abuse. I shoved pills into her mouth and got her extremely affected. Left her at the festival. No contact until a few weeks ago. I messaged her asking her to appologise. I said I lived in melbourne. 

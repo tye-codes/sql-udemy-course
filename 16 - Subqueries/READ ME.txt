@@ -1,0 +1,16 @@
+Subqueries: 
+SELECT
+*
+FROM(
+	SELECT
+	*
+	FROM (we don't see the outputs from this query)
+)
+
+Why Subquery? 
+Writting queries per step helps keep queries fast and not complicated. 
+
+Subquery Categories: 
+Dependency Type: Non-correlated subquery & Correlated 
+Result Type: Scalar, Row and Table Subqueries
+Location Type: SELECT, FROM, JOIN & WHERE
