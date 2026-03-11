@@ -14,3 +14,82 @@ Subquery Categories:
 Dependency Type: Non-correlated subquery & Correlated 
 Result Type: Scalar, Row and Table Subqueries
 Location Type: SELECT, FROM, JOIN & WHERE
+
+FROM Subquery:
+SELECT
+*
+FROM(
+	SELECT
+	*
+	FROM()name
+)
+
+
+SELECT Subquery:
+SELECT,
+Col1,
+(SELECT colx FROM table1 WHERE ... ) AS alias *Must be scalar values - 1 value*
+FROM table 1
+
+
+JOIN Subquery: two queries seperated by a join clause
+SELECT
+	*
+FROM Sales.Customers c
+	LEFT JOIN (
+		SELECT
+			CustomerID,
+			COUNT(*) TotalOrders
+		FROM Sales.Orders
+		GROUP BY CustomerID) o
+	ON c.CustomerID = o.CustomerID
+
+
+WHERE Subquery:
+SELECT
+	*
+FROM table1
+WHERE coly = (SELECT colx FROM table2 WHERE ...))
+
+IN Subquery: 
+SELECT 
+*
+FROM table1
+WHERE col IN(SELECT col FROM table 2 WHERE ...)
+
+
+!!!CORRELATED SUBQUERIES!!!
+This kind requires values from the main query 
+
+SELECT
+	*,
+(SELECT COUNT(*) FROM Sales.Orders o WHERE o.CustomerID = c.CustomerID) TotalSales
+FROM Sales.Customers c
+--need to name the tables so we can reference them. Need to have a common column generally the primary key
+
+
+EXISTS: Checks if the subquery is returning rows
+SELECT 
+*
+FROM table2
+WHERE EXISITS (SELECT 1 FROM TABLE1
+			WHERE Table1.ID = Table2.ID)
+
+Eg. 
+-- Show the details of orders made by customers in Germany
+SELECT
+	*
+FROM Sales.Orders o
+WHERE EXISTS (
+	SELECT
+		1 --Select 1 because this part doesn't matter and just helps with efficiency
+	FROM Sales.Customers c
+	WHERE Country = 'Germany'
+	AND o.CustomerID = c.CustomerID)
+
+USE CASE
+Create temporary result set
+prepare data before joining tables
+dynamic and complex filtering
+check the existence of rows from another table
+row by row comparison
