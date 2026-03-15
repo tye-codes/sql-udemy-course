@@ -1,0 +1,52 @@
+CTE Summary:
+CTE are temporary named results.
+Advantages:
+- Readability
+- Modularity
+- Reusability
+- Recursivity
+
+Temporary, named results which can be used multiple times during a query to simplify
+and organize complex query. CTE table is destroyed after the query ends.
+
+--CTE query
+SELECT
+*
+FROM
+WHERE
+--Main Query
+SELECT
+*
+FROM
+
+RECURSIVE & NON-RECURSIVE
+
+STANDALONE NON-RECURSIVE
+defined and used independently.
+
+Syntax:
+
+WITH CTE-Name AS
+( 
+	SELECT
+	FROM
+	WHERE
+)
+--Main Query
+SELECT
+FROM CTE-name
+
+RECRUSIVE CTE:
+
+''Anchor Query''
+WITH CTE_Name AS(
+SELECT ...
+FROM ...
+
+UNION (ALL)
+
+"Recursive Query" 
+SELECT
+FROM CTE_Name -- Referencing the CTE is what creates the loop.
+WHERE [break condition]
+)

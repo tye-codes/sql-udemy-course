@@ -1,0 +1,52 @@
+Views Summary:
+virtual table based on a result of a query without storing data
+we use views to persist complex sql query in data base
+views are better than CTE for multiple queries
+views are better than tables - flexible and easy to maintain
+
+
+Views are empty virtual tables with a query attached. When the View is called, the query activates
+and populates the table from the physical table stored in the database.
+
+Views vs Tables:
+Tables store the data persistently where as Views do not
+Tables are hard to maintain and change Views are easy to maintain and change
+Tables are faster than views
+Tables can be read/write but views are read only
+
+Views vs CTEs
+CTE reduce redundancy in 1 query where as views does this for multi-queries 
+CTE improves reusability in 1 query where as views does this for multi-queries
+CTEs are temporary logic where as Views are persistent logic that can be used again 
+Need to maintain -create/drop- VIEWs but CTEs do not need to be maintained
+
+
+
+#1 Use Case: Central Logic
+Complex queries can be accessed by anyone in the corporation
+
+Syntax:
+--DDL COMMAND--
+CREATE VIEW  VIEW-NAME AS
+(
+	SELECT
+	FROM
+	WHERE
+)
+
+#2 Use Case: Hide Complexity and Improve abstraction
+
+#3 Use Case: Data security
+data can be censored by row and/or column
+
+#4 Use Case: Flexibility
+If the orginal table needs to be changed, any query previously written to reference the table will not work. 
+Views can be updated to reformat a changed table back to the original properties so no errors come up for other users.
+
+#5 Use Case: Multiple Human Languages
+
+#6 Use Case: Data Warehouse and Data Marts
+Data marts are smaller data warehouses that improve efficiency
+Data marts are created using Views, the warehouses are in physical storage
+
+
