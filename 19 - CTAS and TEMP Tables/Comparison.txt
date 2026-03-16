@@ -1,0 +1,9 @@
+		Subquery		CTE		TMP		CTAS		VIEW
+Storage		Memory		Memory		Disk		Disk		No Storage
+Life Time		Temp		Temp		Temp		Permanent	Permanent
+When Deleted	End of Query	End of Query	End Session	DDL-Drop		DDL-Drop
+Scope		Single-Query	Single-Query	Multi-Query	Multi-Query	Multi-Query
+Reusability		Limited		Limited 		Medium		High		High
+		1 place 1 query	multi place 1 query	multi query
+						during session
+Up2Date		Yes		Yes		No		No		Yes

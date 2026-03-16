@@ -1,0 +1,62 @@
+Permanent table CTAS:
+#1 Use Case: Optimise performance
+View can take a long time if a lot of people are querying the same View
+CTAS will permanently store the data so its faster to access after it has been created. 
+
+#2 Use Case: Snap Shots
+Can take persistent snapshots of data at a certain time to understand data qualty issue. If the table updates regularly
+it can be hard to find the root cause. CTAS taking a snap shot can make it easier
+
+#3 Use Case: Data Marts
+Can make physical data marts if the virtual Views data marts are taking too long to create.
+
+Table Types:
+
+Permanent and Temporary Tables
+
+PERMANENT:
+Create/Insert
+Creates an empty table which you then insert data into manually, from a csv file etc...
+
+Syntax:
+CREATE TABLE Table-Name
+(
+	ID INT,
+	Name VARCHAR(50)
+)
+
+INSERT INTO Table-Name
+VALUES (1, 'Frank')
+
+CTAS (create table as select)
+CTAS vs Views:
+Creating a view does not execute the query and will have no information in it
+CTAS query will be executed. 
+
+Syntax:
+CREATE TABLE NAME AS
+(
+	SELECT
+	FROM
+	WHERE
+)
+or
+SELECT
+INTO New-Table
+FROM
+WHERE
+
+
+Temporary Tables:
+Stores results in temp storage and drops the data after the session ends. 
+
+#1 Use Case: Transformations
+Cannot directly change the original table. So we create a temporary clone and then adjust it as needed. 
+
+Syntax:
+SELECT
+
+INTO #New-Table -- the hash is what makes it temporary 
+
+FROM
+WHERE
