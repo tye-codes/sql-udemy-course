@@ -1,0 +1,45 @@
+Stored procedures are stored in the data base and can be accessed by anyone with access
+
+Stored Procedure vs Query
+
+Queries are 1 time requests, SP have multiple transactions. Can have loops, control flow, parameters and error handling
+
+Stored Proceedures vs Python:
+both can be used for the same use, however python needs connection to the data base, the SP is already in the DB so it is faster
+Python is a lot more flexible, it has version control and can implement complex logic.
+Python is the prefered method.
+
+Syntax:
+CREATE PROCEDURE ProcedureName AS
+BEGIN
+
+*/Stored procedure definition/*
+
+END
+
+EXEC ProcedureName -- executes SP
+
+
+
+PARAMETERS:
+Can be coded into the query so the user specifices the value to be used. 
+Set after naming the procedure @ParameterName ParameterType(MaxLength)
+
+
+===========
+TRIGGERS
+===========
+Use Case: Logs
+When an important table is updated a trigger can act to update logs
+
+======
+Syntax:
+=====
+CREATE TRIGGER TriggerName ON TableName
+AFTER INSERT, UPDATE, DELETE
+BEGIN
+ --SQL statement goes here
+END
+
+
+
