@@ -1,0 +1,40 @@
+Indexes:
+Helps with the efficiency of databases. It partitions data into areas so when scanning for things you don't need to scan the whole database.
+
+Can be indexed by:
+Structure
+	clustered
+	non-clustered
+Storage
+	rowstore index
+	columnstore index
+functions
+	unique index
+	filtered index
+
+===========
+Clustered Index
+===========
+With the table key row ordered descending, a B-tree is constructed (upside down tree node)
+An index page could for example contain a node for key ID 1-200, so when looking for within that range,
+it will search for the IDs clustered through that node or skip it if looking for different ID.
+
+===========
+Non-Clustered
+===========
+Each page has an offset index matched with a header ID. ID could be 1:150 and offset could be 96.
+It is written lke this 1:150:96, 96 is where the row would start. Using the offset only the start of the row needs 
+to be searched for until the right one is found. 
+
+====================
+Clustered vs non-Clustered
+====================
+
+Clustered is similar to the table of contents at the front of a book. It tells you where each chapter (group of IDs) is.
+Non-Clustered is more like an index, it will give you the exact page number (row location) of each topic (ID) 
+
+Clustered nodes physically store the data inside the index.
+Non-clustered reference physical data stored outside of the index.
+This means they can be used together. Clustered index can only be done in one way, non-clusted can be organised in multiple ways
+
+Clustered Index is faster to read but slower to write due to data row reordering.

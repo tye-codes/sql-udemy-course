@@ -1,0 +1,35 @@
+============================
+SUBQUERIES BEST PERFORMANCE:
+============================
+
+Tip 1: Use JOIN or EXISTS but never IN 
+
+Tip 2: Avoid reduntant logic in your query 
+
+===========================
+DDL BEST PERFORMANCE
+===========================
+
+Tip 1: Avoid VARCHAR & TEXT
+
+Tip 2: Avoid unecessarily large lengths for data types
+
+Tip 3: Use NOT NULL constraint where applicable. 
+
+Tip 4: Ensure all tables have a clustered primary key
+
+Tip 5: Use non-clusetered index for foreign keys 
+
+==================
+INDEXING BEST PERFORMANCE
+==================
+
+Tip 1: avoid over indexing
+
+Tip 2: Drop unused indexes
+
+Tip 3: Update Statistics regularly
+
+Tip 4: Reorganize and rebuild indexes
+
+Tip 5: Partition large tables to improve performance

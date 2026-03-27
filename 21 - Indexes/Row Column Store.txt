@@ -1,0 +1,25 @@
+Columns are spread out across pages. Each column has its own page. 
+
+How is it done?
+
+Step 1: 
+split the data into row groups, groups can be 1million rows long
+
+Step 2: 
+Data is split by column
+
+Step 3:
+Data compression using dictionary method. 
+
+Step 4:
+Store as a large object LOB
+
+Row store 		vs 	Column Store:
+Less efficient in storage	highly efficient with compression
+
+fair speed for reaad 		Fast read performance
+and write			Slow write performance
+
+lower input-output efficiency	higher I/O efficiency 
+best for OLTP (online)	Best for OLAP (analytical)
+

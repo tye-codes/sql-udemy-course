@@ -1,0 +1,5 @@
+	Tasks - What the AI should do
+	Context - Give background on what its for
+	Specifications - be specific about parameters like word account ansd what needs to be included
+	Role - asking the AI what role to take
+	Tone - how should it be presented

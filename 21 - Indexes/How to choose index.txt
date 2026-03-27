@@ -1,0 +1,17 @@
+HEAP:
+fast inserts
+
+Clustered Index:
+for primary keys or date columns
+
+Columnstore index:
+For analytical queries reduces size of large tables
+
+Non-Clustered:
+for non-PK columns
+
+Filtered Index:
+Target a subset of data and to reduce the size of the index
+
+Unique index
+force uniqueness and improve query speed

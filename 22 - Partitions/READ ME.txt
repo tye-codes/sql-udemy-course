@@ -1,0 +1,45 @@
+Partitions divide large tables into smaller partitions
+
+Tables could be partitioned by age to seperate old and new data to focus on recent data whcih may be used more.
+
+A query can be used to select which partition section you want. Additionally the different partitions can be searched in parallel.
+
+=======
+SYNTAX
+=======
+Step 1: Partition Function
+
+CREATE PARTITION FUNCTION PartitionByYear (DATA)
+AS RANGE LEFT FOR VALUES ('20203-12-31', '2024-12-31', '2025-12-31')
+This stores the partition rules in the data base
+
+Step 2: File Groups - apply the fuction to create the groups where the data will be stored. 
+ALTER DATABASE SalesDB ADD FILEGROUP FG_2023;
+ALTER DATABASE SalesDB ADD FILEGROUP FG_2024;
+ALTER DATABASE SalesDB ADD FILEGROUP FG_2025;
+ALTER DATABASE SalesDB ADD FILEGROUP FG_2026;
+
+Step 3: Create data files
+
+ALTER DATABASE SalesDB ADD FILE 
+(
+	NAME = P_2023, -- Logical name
+	FILENAME = 'file path to file'
+	TO FILEGROUP FG_2023;
+)
+
+
+ALTER DATABASE SalesDB ADD FILE 
+(
+	NAME = P_2023, -- Logical name
+	FILENAME = 'file path to file'
+	TO FILEGROUP FG_2024;
+)
+etc...
+
+Step 4: Partition Scheme - maps the partition function to the file groups
+
+CREATE PARTITION SCHEME SchemePartitionByYear
+AS PARTITION PartitionByYear
+TO (FG_20203, FG_2024, FG_2025, FG_2026)
+

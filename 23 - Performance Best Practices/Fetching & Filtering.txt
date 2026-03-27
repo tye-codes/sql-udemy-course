@@ -1,0 +1,27 @@
+- Always check the execution plan to confirm performance improvements.
+========================
+Performance for Fetching Data
+========================
+
+Tip 1: Select only what you need for a query! 
+
+Tip 2: Avoid unecessary DISTINCT & ORDER BY
+
+Tip 3: For exploring data, limit the rows
+
+ie. SELET TOP 10
+	cols
+     FROM
+
+
+==========================
+Performance for Filtering
+==========================
+
+Tip 1: Create nonclusted index on frequently used columns in WHERE clause
+
+Tip 2: Avoid applying functions to columns in the WHERE clause
+
+Tip 3: Avoid using leading wildcards (%) as they prevent index usage
+
+Tip 4: Use IN instead of OR

@@ -1,0 +1,30 @@
+==============
+Join performance tips
+==============
+
+Tip 1: Use Explicit Join (ANSI Join) Instead of Implicit Join (non-ANSI) 
+ie. specify inner join, left join etc...
+
+Tip 2: Make sure to index the columns used in the ON clause
+
+Tip 3: Filter tables before Joining
+This can be done during WHERE, JOIN or in a subquery
+
+Tip 4: Aggregate before joining 
+This can be done during a subquery or during joins
+
+Tip 5: Use UNION instead of OR in joins
+
+Tip 6: Check for nested loops and use SQL hints
+
+Tip 7: Use UNION ALL if duplicates are acceptable. If they are not use UNION ALL + DISTINCT
+
+======================
+Aggregation Performance Tips
+======================
+
+Tip 1: Use columnstore index for aggregatiosn in large tables
+
+Tip 2: Pre-aggregate data and store it in new table for reporting
+
+Tip 3: 

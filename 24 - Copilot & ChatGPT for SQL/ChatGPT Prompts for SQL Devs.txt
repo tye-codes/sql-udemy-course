@@ -1,0 +1,86 @@
+======================
+Optimize the performance:
+======================
+
+The following sql server query is slow
+
+Do the following:
+propose optimizations to improve its performance
+provide the improved sql query
+explain each imporvement to understand the reasoning behind it
+
+=====================
+Optimize the execution plan
+=====================
+
+The image is the execution plan of sql server query
+Do the following:
+- Describe the execution plan step by step'
+- identify performance bottlenecks and issues
+- Suggest ways to improve performance and optimize the execution plan
+
+============
+Debugging
+============
+The following sql server query causting this error: [error message]
+explain the error message
+find the root cause of the issue
+suggest how to fix it
+[sql query goes here]
+
+=======================
+explain the result
+=======================
+[prompt]
+i didnt understnad the result of the following sql server query
+do the following:
+break down how sql processes the query step by step
+explaining each stage and how the result is formed
+[sql query goes here]
+
+=============
+styling and format
+=============
+
+The following sql server query hard ot understand
+do the following:
+- restyle the code to make it easier to raed
+- align column aliases
+- keep it compact - do not introduce unnecessary new lines
+ensure the formatting follows best practices
+[SQL QUERY HERE]
+
+
+======================
+Documentation and comments
+======================
+The following sql server query lacks comments and documentation
+do the following:
+insert a leading comment at the start of the query describing its overall purpose.
+add comments only where clarification is necessary, avoiding obvious statements.
+create a seperate document explaining the business rules implemented by the query
+create another seperate document describing how the query works
+
+=========
+imporve data base ddl
+================
+the following sql server ddl script has to be optimized
+do the following:'
+naming: check the consistency of table/column naems, prefixes, standards.
+data types: ensure data types are appropriate and optimized
+integrity: verify the integrity of primary keys and foreign keys
+indexes: check that indexes are sufficient and avoid redundancy
+normalization: ensure proper normalisation and avoid redundancy
+
+
+===========================
+Generate test dataset
+===========================
+I need dataset for testing for the following sql server DDL
+do the following 
+- generate test dataset as insert statements
+dataset should be realistic
+keep the dataset small
+ensure all primary/foreign key relationships are valid (use matching IDs)
+dont introduce any NULL values
+[SQL DDL goes here]
